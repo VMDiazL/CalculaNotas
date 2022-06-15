@@ -29,24 +29,23 @@ namespace CalculaNotas
             calculofinal = sumaNota/5;
 
             txtNotaFinal.Text = $"{calculofinal}";
+
+
+            //if (calculofinal => 95)
+            //{
+            //    txtMensaje.Text = $"Su nota Final es:\n +" +
+            //        $"";
+            //}
+
         }
 
 
-        public void validacion (int calculo)
+        public void validacion ()
         {
 
-            if (calculofinal => 95)
-            {
-                txtMensaje.Text = $"Su nota Final es:\n +" +
-                    $"";
-            }
+           
 
 
         }
-
-    }
-
-
-    }
-
+    }    
 }
