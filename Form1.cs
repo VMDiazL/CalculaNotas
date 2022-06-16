@@ -20,31 +20,43 @@ namespace CalculaNotas
         public void btnCalcularNota_Click(object sender, EventArgs e)
         {
             int sumaNota = 0;
-            int calculofinal=0;           
+            int calculofinal = 0;
 
             sumaNota = int.Parse(txtPrimerParcial.Text) + int.Parse(txtSegundoParcial.Text) +
                 int.Parse(txtPractica.Text) + int.Parse(txtAsistencia.Text) +
                 int.Parse(txtExamenFinal.Text);
 
-            calculofinal = sumaNota/5;
+            calculofinal = sumaNota;
 
             txtNotaFinal.Text = $"{calculofinal}";
 
 
-            //if (calculofinal => 95)
-            //{
-            //    txtMensaje.Text = $"Su nota Final es:\n +" +
-            //        $"";
-            //}
-
-        }
-
-
-        public void validacion ()
-        {
-
-           
-
+            if (calculofinal >= 95)
+            {
+                txtMensaje.ForeColor = Color.Green;
+                txtMensaje.Text = $"Su nota Final es:\n" +
+                    $"A";
+            }
+            else if ((calculofinal >= 85) && (calculofinal < 95))
+            {
+                txtMensaje.Text = $"Su nota Final es:\n" +
+                    $"B";
+            }
+            else if ((calculofinal >= 75) && (calculofinal < 85))
+            {
+                txtMensaje.Text = $"Su nota Final es:\n" +
+                    $"C";
+            }
+            else if ((calculofinal >= 70) && (calculofinal < 75))
+            {
+                txtMensaje.Text = $"Su nota Final es:\n" +
+                    $"D";
+            }
+            else if (calculofinal < 70)
+            {
+                txtMensaje.Text = $"Su nota Final es:\n" +
+                    $"F";
+            }
 
         }
     }    
